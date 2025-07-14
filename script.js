@@ -23,11 +23,16 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.2 });
 
+// sections.forEach(section => {
+//   section.style.opacity = 0;
+//   section.style.transform = 'translateY(40px)';
+//   observer.observe(section);
+// });
+
 sections.forEach(section => {
-  section.style.opacity = 0;
-  section.style.transform = 'translateY(40px)';
   observer.observe(section);
 });
+
 
 // Smooth scrolling for nav links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
